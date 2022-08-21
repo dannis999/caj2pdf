@@ -47,22 +47,22 @@ cc -Wall `pkg-config --cflags jbig2dec` -fPIC -shared -o libjbig2codec.so decode
 
 ```
 # 打印文件基本信息（文件类型、页面数、大纲项目数）
-caj2pdf show [input_file]
+python caj2pdf show [input_file]
 
 # 转换文件
-caj2pdf convert [input_file] -o/--output [output_file]
+python caj2pdf convert [input_file] -o/--output [output_file]
 
 # 从 CAJ 文件中提取大纲信息并添加至 PDF 文件
 ## 遇到不支持的文件类型或 Bug 时，可用 CAJViewer 打印 PDF 文件，并用这条命令为其添加大纲
-caj2pdf outlines [input_file] -o/--output [pdf_file]
+python caj2pdf outlines [input_file] -o/--output [pdf_file]
 ```
 
 ### 例
 
 ```
-caj2pdf show test.caj
-caj2pdf convert test.caj -o output.pdf
-caj2pdf outlines test.caj -o printed.pdf
+python caj2pdf show test.caj
+python caj2pdf convert test.caj -o output.pdf
+python caj2pdf outlines test.caj -o printed.pdf
 ```
 
 ### 异常输出（IMPORTANT!!!）
